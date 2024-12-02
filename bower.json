@@ -7,18 +7,18 @@
   "description": "JavaScript implementation of Japanese morphological analyzer",
   "main": [
     "build/kuromoji.js",
-    "dict/base.dat.gz",
-    "dict/cc.dat.gz",
-    "dict/check.dat.gz",
-    "dict/tid.dat.gz",
-    "dict/tid_map.dat.gz",
-    "dict/tid_pos.dat.gz",
-    "dict/unk.dat.gz",
-    "dict/unk_char.dat.gz",
-    "dict/unk_compat.dat.gz",
-    "dict/unk_invoke.dat.gz",
-    "dict/unk_map.dat.gz",
-    "dict/unk_pos.dat.gz"
+    "dict/base.dat.gzip",
+    "dict/cc.dat.gzip",
+    "dict/check.dat.gzip",
+    "dict/tid.dat.gzip",
+    "dict/tid_map.dat.gzip",
+    "dict/tid_pos.dat.gzip",
+    "dict/unk.dat.gzip",
+    "dict/unk_char.dat.gzip",
+    "dict/unk_compat.dat.gzip",
+    "dict/unk_invoke.dat.gzip",
+    "dict/unk_map.dat.gzip",
+    "dict/unk_pos.dat.gzip"
   ],
   "keywords": [
     "morphological analyzer",
@@ -29,7 +29,7 @@
     "nlp"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://github.com/takuyaa/kuromoji.js",
+  "homepage": "https://github.com/hoangtheanhhp/kuromoji-fedora.js",
   "ignore": [
     "**/.*",
     "bower_components",

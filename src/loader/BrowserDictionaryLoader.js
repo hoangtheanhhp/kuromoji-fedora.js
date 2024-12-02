@@ -17,7 +17,6 @@
 
 "use strict";
 
-var zlib = require("zlibjs/bin/gunzip.min.js");
 var DictionaryLoader = require("./DictionaryLoader");
 
 /**
@@ -47,9 +46,12 @@ BrowserDictionaryLoader.prototype.loadArrayBuffer = function (url, callback) {
         }
         var arraybuffer = this.response;
 
-        var gz = new zlib.Zlib.Gunzip(new Uint8Array(arraybuffer));
-        var typed_array = gz.decompress();
-        callback(null, typed_array.buffer);
+        const ds = new DecompressionStream("gzip");
+        const blob = new Blob([arraybuffer]);
+        const decompressedStream = blob.stream().pipeThrough(ds);
+        new Response(decompressedStream).arrayBuffer().then(buffer => {
+           callback(null, buffer);
+        });
     };
     xhr.onerror = function (err) {
         callback(err, null);
